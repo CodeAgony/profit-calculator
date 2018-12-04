@@ -5,11 +5,12 @@ var calcProfit = function(){
   var sellPrice = document.getElementById("sellPrice").value;
   var tax = document.getElementById("tax").value;
 
-  var profitSilver = Math.round((sellPrice*amount-(sellPrice*amount/100)*tax)-buyPrice*amount);
+  var profitSilver = `You are ${Math.round((sellPrice*amount-(sellPrice*amount/100)*tax)-buyPrice*amount)} silver richer `;
   console.log(profitSilver);
   document.getElementById("profitSilver").value = profitSilver;
 
-  var profitMargin = `${Math.round(profitSilver/(buyPrice*amount)*100)}% `;
+
+  var profitMargin = `Profit margin is ${Math.round(document.getElementById("profitSilver").value.replace(/[^\d-]/gi, "")/(buyPrice*amount)*100)}% `;
   console.log(profitMargin);
   document.getElementById("profitMargin").value = profitMargin;
 
