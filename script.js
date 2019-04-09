@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function(){
-// document.addEventListener('change', calcProfit)
 
     const calcProfit = function(){    
         let buyPrice = document.getElementById("buyPrice").value;
@@ -19,4 +18,5 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     document.getElementById('button-calc').addEventListener('click', calcProfit);
+    document.addEventListener('change', calcProfit);
 })
