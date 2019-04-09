@@ -5,16 +5,14 @@ document.addEventListener('DOMContentLoaded', function(){
         let amount = document.getElementById("amount").value;
         let sellPrice = document.getElementById("sellPrice").value;
         let tax = document.getElementById("tax").value;
-        let profitSilver = document.getElementById("profitSilver").value;
-        let profitMargin = document.getElementById("profitMargin").value;
+        let profitSilver = document.getElementById("profitSilver");
+        let profitMargin = document.getElementById("profitMargin");
 
-        profitSilver = `You are ${Math.round((sellPrice*amount-(sellPrice*amount/100)*tax)-buyPrice*amount)} silver richer`;
-        console.log(profitSilver);
+        profitSilver.value = `You are ${Math.round((sellPrice*amount-(sellPrice*amount/100)*tax)-buyPrice*amount)} silver richer`;
+        console.log(profitSilver.value);
         
-
-
-        profitMargin = `Profit margin is ${Math.round(document.getElementById("profitSilver").value/(buyPrice*amount)*100)}%`;
-        console.log(profitMargin);
+        profitMargin.value = `Profit margin is ${Math.round(profitSilver.value.replace(/[^\d-]/gi, "")/(buyPrice*amount)*100)}%`;
+        console.log(profitMargin.value);
     }
 
     document.getElementById('button-calc').addEventListener('click', calcProfit);
