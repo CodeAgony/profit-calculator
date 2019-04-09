@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
-
+    
     const calcProfit = function(){    
 
         let buyPrice = document.getElementById("buyPrice").value;
@@ -15,19 +15,17 @@ document.addEventListener('DOMContentLoaded', function(){
         const profitMargin = `Profit margin is ${Math.round(document.getElementById("profitSilver").value/(buyPrice*amount)*100)}% `;
         console.log(profitMargin);
         document.getElementById("profitMargin").value = profitMargin;
+    }
 
-  }
+    const resetOnClick = function(){
 
-  const resetOnClick = function(){
-    document.getElementById("tax").value =
-    document.getElementById("sellPrice").value =
-    document.getElementById("amount").value =
-    document.getElementById("buyPrice").value = 
-    document.getElementById("profitSilver").value =
-    document.getElementById("profitMargin").value = "";
-    console.log("reset clicked");
-  } 
-
+        document.getElementById("tax").value =
+        document.getElementById("sellPrice").value =
+        document.getElementById("amount").value =
+        document.getElementById("buyPrice").value = 
+        document.getElementById("profitSilver").value =
+        document.getElementById("profitMargin").value = "";
+        console.log("reset clicked");
+    } 
 
 })
-  
