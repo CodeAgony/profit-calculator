@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function(){
 
     const calcProfit = function(){    
-        let buyPrice = document.getElementById("buyPrice").value;
-        let amount = document.getElementById("amount").value;
-        let sellPrice = document.getElementById("sellPrice").value;
-        let tax = document.getElementById("tax").value;
-        let profitSilver = document.getElementById("profitSilver");
-        let profitMargin = document.getElementById("profitMargin");
+        let buyPrice = document.forms[0].value;
+        let amount = document.forms[1].value;
+        let sellPrice = document.forms[2].value;
+        let tax = document.forms[3].value;
+        let profitSilver = document.forms[4];
+        let profitMargin = document.forms[5];
 
         profitSilver.value = `You are ${Math.round((sellPrice*amount-(sellPrice*amount/100)*tax)-buyPrice*amount)} silver richer`;
         console.log(profitSilver.value);
